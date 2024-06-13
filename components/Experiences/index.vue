@@ -1,6 +1,4 @@
 <script setup lang="ts"></script>
 <template>
-    <Introduction/>
-    <About/>
-    <Experiences/>
+    <div>Experiences</div>
 </template>

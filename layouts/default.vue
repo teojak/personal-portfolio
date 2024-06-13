@@ -2,7 +2,7 @@
 <template>
     <div class="w-screen h-screen flex flex-col">
         <UiHeader/>
-        <div class="w-full h-full overflow-auto">
+        <div class="w-full h-full overflow-auto flex-1">
             <slot />
         </div>
     </div>

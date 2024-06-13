@@ -4,6 +4,6 @@
         <ul class="flex flex-row items-center gap-5">
             <UiNavigationLink text="Homepage" route-name="index"/>
             <UiNavigationLink :text="'About'" :route-name="'about'" />
-         </ul>
+        </ul>
      </nav>
 </template>
