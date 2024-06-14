@@ -1,4 +1,4 @@
 <script setup lang="ts"></script>
 <template>
-    <div>About</div>
+    <div class=" dark:bg-black dark:text-white">About</div>
 </template>
