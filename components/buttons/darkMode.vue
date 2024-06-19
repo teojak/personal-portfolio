@@ -1,18 +1,10 @@
 <script setup lang="ts">
-const isDark=ref(false as boolean)
-const emit = defineEmits(["onDarkModeChanged"]);
-onMounted(()=>{
-  if ( window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    isDark.value=true;
-    emit("onDarkModeChanged", isDark.value);
-  } 
-});
+import { useDarkModeStore } from '~/store/darkMode';
+
+const store = useDarkModeStore()
 
 function toggleDarkMode() {
-  isDark.value = !isDark.value;
-  emit("onDarkModeChanged", isDark.value);
-  console.log(isDark);
-  
+  store.darkToggle();
 }
 </script>
 <template>
@@ -23,11 +15,11 @@ function toggleDarkMode() {
     </div>
     <div class="relative w-fit h-fit">
       <div class="md:hidden">
-        <img src="@/assets/cerchio.png" v-if="!isDark" class=" translate-x-8 duration-300 transition-all -translate-y-8 aspect-square w-8 h-8"/>
+        <img src="@/assets/cerchio.png" v-if="!store.darkModeBool" class=" translate-x-8 duration-300 transition-all -translate-y-8 aspect-square w-8 h-8"/>
         <img src="@/assets/cerchio.png" v-else class=" translate-x-0 duration-300 transition-all -translate-y-8 aspect-square w-8 h-8"/>
       </div>
       <div class="sm:hidden md:block">
-        <img src="@/assets/cerchio.png" v-if="!isDark" class=" translate-x-4 duration-300 transition-all aspect-square w-8 h-8"/>
+        <img src="@/assets/cerchio.png" v-if="!store.darkModeBool" class=" translate-x-4 duration-300 transition-all aspect-square w-8 h-8"/>
         <img src="@/assets/cerchio.png" v-else class=" -translate-x-4 duration-300 transition-all aspect-square w-8 h-8"/>
       </div>
       

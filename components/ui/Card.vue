@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 <template>
   <div
-    class="shadow border border-gray-400 rounded-xl bg-black overflow-hidden w-fit h-fit"
+    class="shadow border border-white dark:border-black rounded-xl overflow-hidden w-fit h-fit"
     :class="{ 'p-5': needsPadding }"
   >
     <slot />

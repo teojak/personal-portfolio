@@ -17,7 +17,7 @@ function gotoRoute() {
 </script>
 <template>
   <h3
-    class="cursor-pointer select-none text-white dark:text-black text-3xl font-semibold tracking-wider"
+    class="cursor-pointer select-none text-white dark:text-black text-xl font-semibold tracking-wider"
     @click="gotoRoute"
   >
     {{ text }}
