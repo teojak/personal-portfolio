@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const isDark = ref(false as boolean);
-
 </script>
 <template>
     <div class="w-screen h-screen flex flex-col" :class="{ dark: isDark }" >
