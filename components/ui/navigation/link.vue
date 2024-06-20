@@ -7,7 +7,7 @@
         routeName:{
             type: String,
             required: true,
-        }
+        },
     });
 
     function goToRoute(){

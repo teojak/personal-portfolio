@@ -1,2 +1,7 @@
-<script setup lang="ts"></script>
-<template>Homepage</template>
+<script setup lang="ts">
+</script>
+<template>
+    <Introduction/>
+    <About/>
+    <Experiences/>
+</template>
